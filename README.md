@@ -2,13 +2,13 @@
 
 In root directory of project:
 ```
-docker build -t desired-name .
+docker build -t custom-name .
 ```
 
 then:
 
 ```
-docker run --name nginx -d -p 8080:80 desired-name
+docker run --name nginx -d -p 8080:80 custom-name
 ```
 
 navigate to http://localhost:8080 or http://host-ip:8080
@@ -19,7 +19,7 @@ navigate to http://localhost:8080 or http://host-ip:8080
 If you want to look around the container, get the running docker containers' ID: 
 
 ```
-docker container ls
+docker ps
 ```
 
 then: 
