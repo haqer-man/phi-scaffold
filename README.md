@@ -6,7 +6,6 @@ docker build -t custom-name .
 ```
 
 then:
-
 ```
 docker run --name nginx -d -p 8080:80 custom-name
 ```
@@ -29,3 +28,10 @@ docker exec -it CONTAINER-ID bin/bash
 ```
 
 type exit to exit
+
+## Certbot
+
+[Follow this simple guide](https://www.nginx.com/blog/using-free-ssltls-certificates-from-lets-encrypt-with-nginx/) for SSL certificates.
+
+Spin up the container first, then open a shell in it and follow the guide. So make sure not to kill the container as of 
+this moment because changes will be lost. It's a bit of manual work for now, but that's alright, I'll find a better solution later.
