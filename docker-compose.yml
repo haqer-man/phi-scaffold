@@ -1,9 +1,11 @@
-local:
-  image: nginx
-  volumes:
-    - ./templates:/etc/nginx/templates
-  ports:
-    - "8080:80"
-  environment:
-    - NGINX_HOST=127.0.0.1
-    - NGINX_PORT=80
+version: "3.7"
+services:
+  local:
+    image: nginx
+    volumes:
+      - ./templates:/etc/nginx/templates
+    build:
+      dockerfile: Dockerfile
+      context: .
+    ports:
+      - "8080:80"
